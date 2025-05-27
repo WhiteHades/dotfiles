@@ -1,1 +1,35 @@
+# apps
 obsidian/
+google-chrome/
+libreoffice/
+org.gnome.Ptyxis/
+qBittorrent/
+nautilus/
+evolution/
+ibus/
+gnome-session/
+goa-1.0/
+abrt/
+
+# system caches
+dconf/
+gtk-3.0/
+gtk-4.0/
+pulse/
+matplotlib/
+menus/
+Cursor/
+enchant/
+
+# security/session/state blobs
+monitors.xml*
+mimeapps.list
+user-dirs.*
+gnome-initial-setup-done
+connections.db
+QtProject.conf
+
+
+*.swp
+*.swo
+*~
