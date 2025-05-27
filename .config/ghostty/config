@@ -1,0 +1,14 @@
+font-family = "JetBrainsMono Nerd Font"
+font-size = 10
+
+theme=catppuccin-mocha
+background-opacity = 0.95
+background-blur = true
+
+cursor-style = "bar"
+cursor-color = "#89b4fa"
+cursor-style-blink = true
+
+window-width = 105
+window-height = 38
+
