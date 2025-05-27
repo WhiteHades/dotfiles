@@ -1,0 +1,43 @@
+# ignore system/user data
+.cache/
+.local/
+.pki/
+.var/
+.steam/
+.steampid
+.steampath
+.nv/
+
+# ignore credentials and secrets
+.ssh/id_*
+.ssh/known_hosts
+.ssh/*.pub
+.insightface/
+.keras/
+
+# ignore large or personal folders
+Downloads/
+Documents/
+Videos/
+Music/
+Templates/
+Public/
+Desktop/
+Games/
+
+# ignore runtime/editor junk
+*.log
+*.swp
+*.swo
+*~
+*.bak
+
+# dev tool build folders
+node_modules/
+__pycache__/
+*.pyc
+.vscode/
+.venv/
+
+# symlinks or binaries
+fd
