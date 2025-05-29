@@ -33,3 +33,4 @@ QtProject.conf
 *.swp
 *.swo
 *~
+systemd/user/gnome-session.target.wants/

@@ -8,6 +8,7 @@
 .steampath
 .nv/
 .config/qBittorrent/
+Pictures/wallpapers/
 
 # ignore credentials and secrets
 .ssh/id_*

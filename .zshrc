@@ -1,4 +1,4 @@
-fastfetch
+# fastfetch
 
 export SHELL=/usr/bin/zsh
 eval "$(starship init zsh)"
@@ -22,9 +22,15 @@ alias llm="llm -m gemini-2.0-flash-lite"
 alias grep="rg"
 alias codes="cd ~/Documents/PKM/01_Projects/Codes && ls"
 alias config="/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME"
+alias vim="nvim"
+alias nv="nvim"
+alias cdnvim="nvim ~/.config/nvim/"
+alias cdd="cd ~/Downloads"
 
 export PATH=/usr/local/cuda-11.8/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH=$PATH:/home/efaz/.spicetify
