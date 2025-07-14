@@ -1,45 +1,30 @@
-# ignore system/user data
-.cache/
-.local/
-.pki/
-.var/
-.steam/
-.steampid
-.steampath
-.nv/
-.config/qBittorrent/
-Pictures/wallpapers/
+# Ignore everything
+*
 
-# ignore credentials and secrets
-.ssh/id_*
-.ssh/known_hosts
-.ssh/*.pub
-.insightface/
-.keras/
+# Track specific dotfiles
+!.zshrc
+!.zshenv
+!.tmux.conf
+!.gitignore
+!.gitconfig
 
-# ignore large or personal folders
-Downloads/
-Documents/
-Videos/
-Music/
-Templates/
-Public/
-Desktop/
-Games/
+# Allow .config but ignore everything inside
+!.config/
+.config/*
 
-# ignore runtime/editor junk
-*.log
+# Explicitly allow these folders inside .config
+!.config/fastfetch/**
+!.config/ghostty/**
+!.config/mpv/**
+!.config/nvim/**
+!.config/starship.toml
+
+# Now blacklist individual noisy files (these will now work!)
+.config/nvim/lazy-lock.json
+
+# Editor swap/backup/temp files
 *.swp
 *.swo
 *~
-*.bak
+*.tmp
 
-# dev tool build folders
-node_modules/
-__pycache__/
-*.pyc
-.vscode/
-.venv/
-
-# symlinks or binaries
-fd
