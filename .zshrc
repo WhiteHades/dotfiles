@@ -36,6 +36,7 @@ alias vim="nvim"
 alias nv="nvim"
 alias cdnvim="nvim ~/.config/nvim/"
 alias cdd="cd ~/Downloads"
+alias cdroot="cd ~"
 alias updateall='flatpak update -y && sudo dnf upgrade --refresh -y && echo "All updates complete. Reboot now? (y/n)" && read ans && [ "$ans" = "y" ] && sudo reboot'
 alias cleanall='sudo dnf autoremove -y && sudo dnf clean all'
 alias updategrub='sudo grub2-mkconfig -o /boot/grub2/grub.cfg'
@@ -79,4 +80,3 @@ dl() {
   fi
 }
 
-export PATH="$HOME/.npm-global/bin:$PATH"
