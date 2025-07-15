@@ -18,7 +18,9 @@
 !.config/fastfetch/**
 !.config/ghostty/**
 !.config/mpv/**
+!.config/nvim/
 !.config/nvim/**
+!.config/nvim/lua/**
 !.config/starship.toml
 
 # Now blacklist individual noisy files (these will now work!)
