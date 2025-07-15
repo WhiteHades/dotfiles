@@ -29,7 +29,7 @@ llm() {
   rm "$tmpfile"
 }
 alias grep="rg"
-alias codes="cd ~/Documents/PKM/01_Projects/Codes && ls"
+alias codes="clear && cd ~/Documents/PKM/01_Projects/Codes && ls"
 alias config="/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME"
 alias lgdot="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME lazygit"
 alias vim="nvim"
@@ -45,6 +45,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 dl() {
   if [[ -z "$1" ]]; then
