@@ -8,7 +8,7 @@
 !.tmux.conf
 !.gitignore
 !.gitconfig
-!windows/
+
 
 # Allow .config but ignore everything inside
 !.config/
@@ -24,9 +24,12 @@
 # Now blacklist individual noisy files (these will now work!)
 .config/nvim/lazy-lock.json
 
+# windows
+!windows/
+!windows/**
+
 # Editor swap/backup/temp files
 *.swp
 *.swo
 *~
 *.tmp
-
