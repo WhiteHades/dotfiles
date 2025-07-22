@@ -7,6 +7,7 @@ eval "$(starship init zsh)"
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #must be last plugin to source
 
 # history
@@ -37,10 +38,10 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
 
-# keybinds
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
-bindkey -r "^V"
+# zsh-history-substring-search configuration
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # alias: navigation/nvim (10)
 alias nn="nvim ~/.config/nvim"
