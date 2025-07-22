@@ -50,6 +50,14 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+# history substring search keybinds for vi(m) mode
+for mode in vicmd viins; do
+  bindkey -M $mode '^[[A' history-substring-search-up
+  bindkey -M $mode '^[[B' history-substring-search-down
+  bindkey -M $mode '^OA'  history-substring-search-up
+  bindkey -M $mode '^OB'  history-substring-search-down
+done
+
 # alias: navigation/nvim (10)
 alias nn="nvim ~/.config/nvim"
 alias ns="nvim ~/.config/starship.toml"
