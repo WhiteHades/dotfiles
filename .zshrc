@@ -1,8 +1,21 @@
 # fastfetch
 # shell config
 export SHELL=/usr/bin/zsh
-setopt extended_glob
 eval "$(starship init zsh)"
+
+# plugins
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+setopt extendedglob
+setopt nocaseglob
+setopt rcexpandparam
+setopt numericglobsort
+setopt nobeep
+setopt appendhistory
+setopt histignorealldups
+setopt autocd
+setopt inc_append_history
+setopt histignorespace
 
 # env: path config
 export PATH=/usr/local/cuda-11.8/bin:$PATH
@@ -64,7 +77,7 @@ unalias llm 2>/dev/null
 llm() {
   local tmpfile=$(mktemp --suffix=.md)
   local context="I'm using Fedora 42 Gnome DE, Ghostty terminal, Zsh"
-  local prompt="$context $* in max 5 lines"
+  local prompt="$context $*. Give answer in max 5 lines"
   command llm -m gemini-2.0-flash-lite "$prompt" > "$tmpfile"
   glow "$tmpfile"
   rm "$tmpfile"
