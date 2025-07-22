@@ -1,3 +1,4 @@
+# fastfetch
 # shell config
 export SHELL=/usr/bin/zsh
 setopt extended_glob
@@ -46,9 +47,11 @@ alias paste="wl-paste"
 alias config="/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME"
 alias lgdot="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME lazygit"
 
-# alias: neovim (2)
+# alias: apps (3)
 alias vim="nvim"
 alias nv="nvim"
+alias anki="flatpak run net.ankiweb.Anki"
+alias qtdebug="QTWEBENGINE_REMOTE_DEBUGGING=8080"
 
 # alias: llm (1)
 unalias llm 2>/dev/null

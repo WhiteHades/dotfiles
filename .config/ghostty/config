@@ -7,5 +7,11 @@ cursor-style = "bar"
 cursor-color = "#89b4fa"
 cursor-style-blink = true
 
-window-width = 105
-window-height = 38
+line-height = 1.0
+cell-padding = 0
+
+window-width = 85
+window-height = 28
+window-decoration = "client"
+gtk-titlebar = false
+gtk-custom-css = "/home/efaz/.config/ghostty/gtk.css"
