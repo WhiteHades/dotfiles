@@ -41,6 +41,26 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 
+
+# colour man pages
+export LESS_TERMCAP_mb=$'\e[01;32m'
+export LESS_TERMCAP_md=$'\e[01;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;47;34m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[01;36m'
+export LESS=-R
+
+# completion system
+autoload -U compinit && compinit
+
+# tab completion enhancements
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' menu select
+
 # fzf config
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
