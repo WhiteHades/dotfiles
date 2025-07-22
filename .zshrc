@@ -1,14 +1,21 @@
 # fastfetch
 # shell config
 export SHELL=/usr/bin/zsh
+export STARSHIP_CACHE="$HOME/.cache/starship"
+export STARSHIP_VI_MODE=true
 eval "$(starship init zsh)"
 
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+source ~/.config/zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #must be last plugin to source
+
+# fix recursion error when using zsh-vi-mode + starship
+# reset zle-keymap-select to avoid infinite wrapping
+zle-keymap-select() { true }
+zle -N zle-keymap-select
 
 # history
 HISTSIZE=110000
