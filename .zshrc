@@ -21,10 +21,16 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 bindkey -r "^V"
 
-# alias: navigation (4)
-alias cdv="nvim ~/.config/nvim/"
-alias cdd="cd ~/Downloads"
-alias cdr="cd ~"
+# alias: navigation/nvim (10)
+alias nn="nvim ~/.config/nvim"
+alias ns="nvim ~/.config/starship.toml"
+alias ng="nvim ~/.config/ghostty"
+alias nz="nvim ~/.zshrc && source ~/.zshrc"
+alias co="clear && cd ~/Downloads && ls"
+alias cr="clear && cd ~"
+alias cc="clear && cd ~/.config"
+alias sz="source ~/.zshrc"
+alias catzs="cat ~/.zshrc"
 alias codes="clear && cd ~/Documents/PKM/01_Projects/Codes && ls"
 
 # alias: system utils (6)
