@@ -86,6 +86,7 @@ alias nn="nvim ~/.config/nvim"
 alias ns="nvim ~/.config/starship.toml"
 alias ng="nvim ~/.config/ghostty"
 alias nz="nvim ~/.zshrc && source ~/.zshrc"
+alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias co="clear && cd ~/Downloads && ls"
 alias cr="clear && cd ~"
 alias cc="clear && cd ~/.config"
