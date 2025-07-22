@@ -41,7 +41,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-
 # colour man pages
 export LESS_TERMCAP_mb=$'\e[01;32m'
 export LESS_TERMCAP_md=$'\e[01;32m'
@@ -61,9 +60,13 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu select
 
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
 # fzf config
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
+source <(fzf --zsh)
 
 # zsh-history-substring-search configuration
 bindkey '^[[A' history-substring-search-up
@@ -159,4 +162,3 @@ dl() {
     aria2c "${ARIA_OPTS[@]}" "$INPUT"
   fi
 }
-

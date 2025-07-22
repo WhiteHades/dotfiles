@@ -7,9 +7,6 @@ cursor-style = "bar"
 cursor-color = "#89b4fa"
 cursor-style-blink = true
 
-line-height = 1.0
-cell-padding = 0
-
 window-width = 85
 window-height = 28
 window-decoration = "client"
