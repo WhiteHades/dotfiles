@@ -6,6 +6,9 @@ eval "$(starship init zsh)"
 # plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #must be last plugin to source
+
 setopt extendedglob
 setopt nocaseglob
 setopt rcexpandparam
