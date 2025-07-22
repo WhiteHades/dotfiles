@@ -9,16 +9,21 @@ source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #must be last plugin to source
 
+# history
+HISTSIZE=110000
+SAVEHIST=100000
+HISTFILE=~/.histfile
+
 setopt extendedglob
 setopt nocaseglob
 setopt rcexpandparam
 setopt numericglobsort
 setopt nobeep
-setopt appendhistory
+setopt share_history
 setopt histignorealldups
 setopt autocd
-setopt inc_append_history
 setopt histignorespace
+setopt hist_reduce_blanks
 
 # env: path config
 export PATH=/usr/local/cuda-11.8/bin:$PATH
