@@ -3,6 +3,11 @@ font-size = 11
 
 theme=catppuccin-mocha
 
+window-padding-y = 0
+window-padding-x = 0
+window-padding-balance = true
+window-padding-color = "extend"
+
 cursor-style = "bar"
 cursor-color = "#89b4fa"
 cursor-style-blink = true
