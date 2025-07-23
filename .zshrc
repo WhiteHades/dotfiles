@@ -81,6 +81,11 @@ for mode in vicmd viins; do
   bindkey -M $mode '^OB'  history-substring-search-down
 done
 
+
+# enable fzf key bindings for zsh
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+[ -f /usr/share/fzf/shell/completion.zsh ] && source /usr/share/fzf/shell/completion.zsh
+
 # alias: navigation/nvim (10)
 alias nn="nvim ~/.config/nvim"
 alias ns="nvim ~/.config/starship.toml"
