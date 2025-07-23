@@ -3,7 +3,6 @@
 format = """
 [](surface0)\
 $os\
-$username\
 [](bg:peach fg:surface0)\
 $directory\
 [](fg:peach bg:green)\
@@ -21,25 +20,16 @@ $haskell\
 $python\
 [](fg:teal bg:blue)\
 $docker_context\
-[](fg:blue bg:purple)\
-$time\
-[ ](fg:purple)\
+[ ](fg:blue)\
 $line_break$character
 """
 
-palette = 'catppuccin_mocha'
+#[](fg:blue bg:purple)\
+#[ ](fg:purple)\
+#$time\ after relative line 5 and before 4
+#$username\
 
-[palettes.gruvbox_dark]
-color_fg0 = '#fbf1c7'
-color_bg1 = '#3c3836'
-color_bg3 = '#665c54'
-color_blue = '#458588'
-color_aqua = '#689d6a'
-color_green = '#98971a'
-color_orange = '#d65d0e'
-color_purple = '#b16286'
-color_red = '#cc241d'
-color_yellow = '#d79921'
+palette = 'catppuccin_mocha'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
@@ -83,7 +73,7 @@ Macos = ""
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
-Fedora = "󰣛"
+Fedora = "󰣛 "
 Alpine = ""
 Amazon = ""
 Android = ""
@@ -111,7 +101,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"Codes" = "󰲋 "
 
 [git_branch]
 symbol = ""
@@ -179,7 +169,8 @@ style = "bg:peach"
 format = '[[  $time ](fg:mantle bg:purple)]($style)'
 
 [line_break]
-disabled = false
+#disabled = false
+disabled = true
 
 [character]
 disabled = false
@@ -191,6 +182,6 @@ vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:lavender)'
 
 [cmd_duration]
-min_time = 0                                              # Show only if command took more than 1 second
+min_time = 0                                              # show only if command took more than 1 second
 style = "fg:rosewater bg:purple"
 format = '[[  $duration ](fg:mantle bg:purple)]($style)'
