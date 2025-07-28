@@ -87,7 +87,7 @@ done
 [ -f /usr/share/fzf/shell/completion.zsh ] && source /usr/share/fzf/shell/completion.zsh
 
 # alias: navigation/nvim (10)
-alias nn="nvim ~/.config/nvim"
+alias nn="cd ~/.config/nvim && nvim"
 alias ns="nvim ~/.config/starship.toml"
 alias ng="nvim ~/.config/ghostty"
 alias nz="nvim ~/.zshrc && source ~/.zshrc"
@@ -119,7 +119,10 @@ alias paste="wl-paste"
 alias config="/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME"
 alias lgdot="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME lazygit"
 
-# alias: apps (3)
+# alias: apps (7)
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias ta="tmux attach-session"
 alias vim="nvim"
 alias nv="nvim"
 alias anki="flatpak run net.ankiweb.Anki"
