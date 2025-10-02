@@ -81,15 +81,14 @@ for mode in vicmd viins; do
   bindkey -M $mode '^OB'  history-substring-search-down
 done
 
-
 # enable fzf key bindings for zsh
 [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 [ -f /usr/share/fzf/shell/completion.zsh ] && source /usr/share/fzf/shell/completion.zsh
 
-# alias: navigation/nvim (10)
+# alias: navigation/nvim (11)
 alias nn="cd ~/.config/nvim && nvim"
 alias ns="nvim ~/.config/starship.toml"
-alias ng="nvim ~/.config/ghostty"
+alias ng="nvim ~/.config/ghostty/config"
 alias nz="nvim ~/.zshrc && source ~/.zshrc"
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias co="clear && cd ~/Downloads && ls"
@@ -107,13 +106,15 @@ alias updateall='flatpak update -y && sudo dnf upgrade --refresh -y && echo "All
 alias cleanall='sudo dnf autoremove -y && sudo dnf clean all'
 alias updategrub='sudo grub2-mkconfig -o /boot/grub2/grub.cfg'
 
-# alias: file/view tools (5)
+# alias: file/view tools (8)
 alias cat="bat"
 alias ls="eza -l --icons"
 alias ll="ls -lah --color=auto"
 alias grep="rg"
 alias copy="wl-copy"
 alias paste="wl-paste"
+alias ctar="echo *.tar.gz | copy"
+alias cpwd="pwd | copy"
 
 # alias: git dotfiles (2)
 alias config="/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME"
@@ -141,6 +142,7 @@ llm() {
 
 # function: download wrapper using aria2c
 dl() {
+  setopt localoptions noglob
   if [[ -z "$1" ]]; then
     echo "Usage: dl <url|file> [destination_folder]"
     return 1
@@ -163,6 +165,7 @@ dl() {
     --console-log-level=warn
     --summary-interval=0
     --enable-color=true
+    --check-certificate=false
   )
 
   if [[ -f "$INPUT" ]]; then

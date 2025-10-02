@@ -6,3 +6,22 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "html", "vue" },
+  callback = function()
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.expandtab = true
+    vim.opt_local.autoindent = true
+    vim.opt_local.smartindent = true
+    vim.opt_local.smarttab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = { "html", "vue" },
+  callback = function()
+    vim.cmd("normal! ==")
+  end,
+})
