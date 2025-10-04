@@ -1,0 +1,1 @@
+/home/efaz/.config/omarchy/current/theme/neovim.lua
