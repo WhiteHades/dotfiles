@@ -1,0 +1,27 @@
+add_newline = true
+format = """$username$hostname$directory$git_branch$git_status$cmd_duration
+$character"""
+
+[username]
+show_always = false
+
+[hostname]
+ssh_only = true
+
+[directory]
+truncation_length = 3
+
+[git_branch]
+format = " [$symbol$branch]($style)"
+
+[git_status]
+format = " [$all_status$ahead_behind]($style)"
+
+[cmd_duration]
+min_time = 1500
+format = " ⏱ $duration"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold yellow)" # shows when you're in vi "normal" mode (bindkey -v)

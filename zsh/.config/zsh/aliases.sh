@@ -1,7 +1,6 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias cd='zd'
 alias cat='bat'
 alias grep='rg'
 alias ls='eza -lh --group-directories-first --icons=auto'
@@ -13,7 +12,7 @@ alias lgt='eza -lh --group-directories-first --icons=auto --git --tree --level=2
 alias v='nvim'
 alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias ff='fzf --preview '\''bat --style=numbers --color=always {}'\'''
-alias sz='source ~/.zshrc'
+alias sz='source $ZDOTDIR/.zshrc'
 alias cr='cd ~'
 alias co='cd ~/Downloads'
 
