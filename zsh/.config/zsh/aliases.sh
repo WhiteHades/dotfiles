@@ -1,0 +1,11 @@
+alias cat='bat'
+alias ls='eza -l --icons'
+alias ll='eza -lah --icons --git'
+alias grep='rg'
+
+alias v='nvim'
+alias nf='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
+alias sz='source ~/.zshrc'
+alias cc='cd ~/.config'
+alias cr='cd ~'
+alias co='cd ~/Downloads'
