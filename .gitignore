@@ -1,1 +1,5 @@
 **/.zcompdump*
+nvim/lazy-lock.json
+*.log
+tmux-*.log
+EOF
