@@ -9,13 +9,17 @@ setopt share_history
 setopt histignorealldups
 setopt histignorespace
 setopt hist_reduce_blanks
+# setopt PROMPT_SUBST
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
-bindkey -v
+if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
+      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
+    zle -N zle-keymap-select "";
+fi
+
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # fzf: keybindings + completion
@@ -29,6 +33,11 @@ source <(fzf --zsh)
 # autosuggestions & syntax highlighting
 [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$ZDOTDIR/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
+
+MODE_CURSOR_VIINS="#a6e3a1 bar"
+MODE_CURSOR_VICMD="#89b4fa block"
+MODE_CURSOR_VISUAL="#f9e2af underline"
 
 # completion system
 autoload -U compinit && compinit
