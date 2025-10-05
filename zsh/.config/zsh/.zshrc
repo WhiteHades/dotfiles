@@ -39,6 +39,8 @@ MODE_CURSOR_VIINS="#a6e3a1 bar"
 MODE_CURSOR_VICMD="#89b4fa block"
 MODE_CURSOR_VISUAL="#f9e2af underline"
 
+eval "$(atuin init zsh)"
+
 # completion system
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
