@@ -1,0 +1,27 @@
+
+{
+  "document":   { "color": "#cdd6f4", "background": "#1e1e2e" },
+  "paragraph":  { "color": "#cdd6f4" },
+
+  "heading":    { "color": "#f5c2e7", "bold": true },
+  "h1":         { "color": "#f5c2e7", "bold": true },
+  "h2":         { "color": "#f5c2e7", "bold": true },
+  "h3":         { "color": "#f5c2e7", "bold": true },
+
+  "strong":     { "color": "#f38ba8", "bold": true },
+  "emph":       { "color": "#cba6f7", "italic": true },
+  "strongEmph": { "color": "#eba0ac", "bold": true, "italic": true },
+
+  "link":       { "color": "#89b4fa", "underline": true },
+
+  "inlineCode": { "color": "#fab387", "background": "#171718" },
+  "code":       { "color": "#fab387", "background": "#171718" },
+  "codeBlock":  { "color": "#cdd6f4", "background": "#171718" },
+
+  "blockquote": { "color": "#a6adc8", "italic": true },
+  "hr":         { "color": "#585b70" },
+
+  "table":      { "border": "#585b70", "header": { "color": "#94e2d5", "bold": true } },
+  "list":       { "bullet": "• " },
+  "listItem":   { "color": "#cdd6f4" }
+}
