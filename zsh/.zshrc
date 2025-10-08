@@ -49,3 +49,6 @@ zstyle ':completion:*' menu select
 
 # aliases
 [ -f ~/.config/zsh/aliases.sh ] && source ~/.config/zsh/aliases.sh
+
+# Created by `pipx` on 2025-10-08 13:03:13
+export PATH="$PATH:/home/efaz/.local/bin"
