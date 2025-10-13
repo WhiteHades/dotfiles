@@ -56,7 +56,7 @@
 
   "cpu": {
     "interval": 5,
-    "format": "󰍛",
+    "format": "{usage}%",
     "on-click": "$TERMINAL -e btop"
   },
   "clock": {
@@ -79,15 +79,15 @@
     "on-click": "hyprctl dispatch exec \"[float;center;size 1100 700] omarchy-launch-wifi\""
   },
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-discharging": "{icon}",
-    "format-charging": "{icon}",
-    "format-plugged": "",
+    "format": "{capacity}%",
+    "format-discharging": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "  {capacity}%",
     "format-icons": {
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-    "format-full": "󰂅",
+    "format-full": "100%",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
@@ -105,7 +105,7 @@
     "on-click": "blueberry"
   },
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{volume}%",
     "on-click": "hyprctl dispatch exec \"[float;center;size 1100 700] ghostty --title=Wiremix -e wiremix\"",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
