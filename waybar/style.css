@@ -26,8 +26,25 @@
   min-width: 9px;
 }
 
-#workspaces button.empty {
+#workspaces button.empty label {
   opacity: 0.5;
+}
+
+#workspaces button.visible label {
+  color: #89b4fa;
+}
+
+#workspaces button.active label {
+  color: #cba6f7;
+  border-radius: 6px;
+}
+
+#workspaces button.urgent label {
+  color: #f38ba8;
+}
+
+#custom-omarchy {
+  color: #9AC96A;
 }
 
 #tray,
