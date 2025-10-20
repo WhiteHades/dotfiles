@@ -1,0 +1,23 @@
+-f "bv*+ba[lang=en]/b[lang=en]/bv*+ba/best"
+-S res,codec:av01,codec:vp9,codec:h264,br,fps,alang:en
+
+--merge-output-format mkv
+
+-o "%(channel|uploader)s/%(playlist|)s%(playlist&/|)s%(title).200B.%(ext)s"
+--restrict-filenames
+--paths ~/Downloads/yt-dlp
+
+--embed-metadata
+--embed-chapters
+--embed-thumbnail
+--convert-thumbnails jpg
+--write-subs
+--write-auto-subs
+--sub-langs "en"
+--sleep-subtitles 2
+--embed-subs
+
+--retries 20
+--fragment-retries 20
+--retry-sleep 2:60
+--concurrent-fragments 10
