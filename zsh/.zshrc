@@ -52,3 +52,5 @@ zstyle ':completion:*' menu select
 
 # Created by `pipx` on 2025-10-08 13:03:13
 export PATH="$PATH:/home/efaz/.local/bin"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
