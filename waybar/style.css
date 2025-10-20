@@ -26,11 +26,11 @@
   min-width: 9px;
 }
 
-#workspaces button.empty label {
+#workspaces button.empty {
   opacity: 0.5;
 }
 
-#workspaces button.visible label {
+#workspaces button.visible {
   color: #89b4fa;
 }
 
@@ -47,17 +47,30 @@
   color: #9AC96A;
 }
 
-#tray,
 #cpu,
 #battery,
-#network,
-#bluetooth,
 #pulseaudio,
 #custom-omarchy,
 #custom-screenrecording-indicator,
 #custom-update {
   min-width: 12px;
   margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 20px;
 }
 
 #cpu { color: #f9e2af; }
@@ -68,10 +81,6 @@
 
 #battery.warning { color: #fab387; }
 #battery.critical { color: #f38ba8; }
-
-#custom-expand-icon {
-  margin-right: 7px;
-}
 
 tooltip {
   padding: 2px;
