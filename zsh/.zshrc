@@ -53,4 +53,7 @@ zstyle ':completion:*' menu select
 # Created by `pipx` on 2025-10-08 13:03:13
 export PATH="$PATH:/home/efaz/.local/bin"
 export VOLTA_HOME="$HOME/.volta"
+export VOLTA_FEATURE_PNPM=1
 export PATH="$VOLTA_HOME/bin:$PATH"
+export OLLAMA_ORIGINS="chrome-extension://*"
+export OLLAMA_HOST="127.0.0.1:11434"
