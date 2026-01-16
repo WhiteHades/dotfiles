@@ -72,3 +72,33 @@ fo() {
         --bind 'enter:execute-silent(nohup xdg-open {} >/dev/null 2>&1 &)+abort' \
         --bind 'ctrl-e:become(nvim {})'
 }
+
+aria() {
+  local dir url
+  if [ "$#" -eq 1 ]; then
+    dir="$HOME/Downloads"
+    url="$1"
+  elif [ "$#" -eq 2 ]; then
+    dir="$1"
+    url="$2"
+  else
+    echo "Usage: aria URL   OR   aria DIR URL"
+    return 2
+  fi
+
+  aria2c -c -d "$dir" \
+    --file-allocation=none \
+    --connect-timeout=30 --timeout=30 \
+    --max-tries=10 \
+    -x4 -s4 -k1M \
+    "$url" && return 0
+
+  sleep 20
+  aria2c -c -d "$dir" \
+    --file-allocation=none \
+    --connect-timeout=30 --timeout=30 \
+    --max-tries=20 \
+    -x1 -s1 -k1M \
+    "$url"
+}
+
