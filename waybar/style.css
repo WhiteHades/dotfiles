@@ -19,7 +19,7 @@
   margin: 0;
   padding: 0;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 8.2pt;
+  font-size: 7.8pt;
   font-weight: 600;
 }
 
@@ -49,11 +49,11 @@ window#waybar {
 #custom-update, 
 #custom-voxtype, 
 #custom-screenrecording-indicator {
-  padding: 0 6px;
+  padding: 0 4px;
   background: @mantle;
   border: 1px solid rgba(205, 214, 244, 0.1);
   border-radius: 4px;
-  margin: 1px 2px;
+  margin: 0 1px;
 }
 
 #custom-omarchy {
