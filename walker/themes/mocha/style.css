@@ -1,28 +1,37 @@
-@import "../omarchy/current/theme/walker.css";
+@import "/home/efaz/.config/omarchy/current/theme/walker.css";
 
-/* 12px Rounded Corners */
+/* Reset */
+* {
+  all: unset;
+  font-family: monospace;
+  font-size: 18px;
+  color: @text;
+}
+
+/* 12px Rounded Corners & Theme Colors */
 .box-wrapper {
-  background: alpha(@base, 0.95);
+  background-color: alpha(@base, 0.95);
   padding: 20px;
   border: 2px solid @border;
   border-radius: 12px;
 }
 
 .search-container {
-  background: @base;
+  background-color: @base;
   padding: 10px;
   border-radius: 8px;
 }
 
-/* Clear list style */
-* {
-  font-family: monospace;
-  font-size: 18px;
+.input {
   color: @text;
 }
 
 .item-text-box {
   padding: 14px 0;
+}
+
+.item-text {
+  color: @text;
 }
 
 child:selected .item-box * {
