@@ -1,28 +1,29 @@
-force_keyboard_focus = true                                                 # forces keyboard forcus to stay in Walker
-selection_wrap = true                                                       # wrap list if at bottom or top
+force_keyboard_focus = true
+selection_wrap = true
 theme = "mocha"
 additional_theme_location = "/home/efaz/.config/walker/themes/"
-hide_action_hints = true                                                    # globally hide the action hints
+hide_action_hints = true
 
 [placeholders]
-"default" = { input = " Search...", list = "No Results" } # placeholders for input and empty list, key is the providers name, so f.e. "desktopapplications" or "menus:other"
+"default" = { input = " Search Apps & Files...", list = "No Results" }
 
 [keybinds]
 quick_activate = []
 
 [columns]
-symbols = 1 # providers to be queried by default
+symbols = 1
 
 [providers]
-max_results = 256 # 256 should be enough for everyone
+max_results = 50
 default = [
   "desktopapplications",
+  "files",
   "websearch",
 ]
 
 [[providers.prefixes]]
 prefix = "/"
-provider = "providerlist"
+provider = "files"
 
 [[providers.prefixes]]
 prefix = "."
@@ -43,6 +44,33 @@ provider = "websearch"
 [[providers.prefixes]]
 prefix = "$"
 provider = "clipboard"
+
+[providers.files]
+max_results = 30
+base_directory = "/home/efaz"
+search_command = "plocate --ignore-case --limit 100"
+exclude_paths = [
+  "/home/efaz/.cache",
+  "/home/efaz/.git",
+  "/home/efaz/node_modules",
+  "/home/efaz/.npm",
+  "/home/efaz/.cargo",
+  "/home/efaz/.rustup",
+  "/home/efaz/.ssh",
+  "/home/efaz/.gnupg",
+  "/home/efaz/.local/share/Trash"
+]
+exclude_patterns = [
+  ".env",
+  "*.key",
+  "*.pem",
+  "secret",
+  "credentials",
+  "passwd",
+  "shadow",
+  "*.db",
+  "*.sqlite"
+]
 
 [[emergencies]]
 text = "Restart Walker"
