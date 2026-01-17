@@ -1,0 +1,35 @@
+@import "../omarchy/current/theme/walker.css";
+
+/* 12px Rounded Corners */
+.box-wrapper {
+  background: alpha(@base, 0.95);
+  padding: 20px;
+  border: 2px solid @border;
+  border-radius: 12px;
+}
+
+.search-container {
+  background: @base;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Clear list style */
+* {
+  font-family: monospace;
+  font-size: 18px;
+  color: @text;
+}
+
+.item-text-box {
+  padding: 14px 0;
+}
+
+child:selected .item-box * {
+  color: @selected-text;
+}
+
+/* Hide Keybind Hints (F1, F2, etc.) */
+.keybind-hints {
+  display: none;
+}
