@@ -1,93 +1,152 @@
-@import "../omarchy/current/theme/waybar.css";
+@import "/home/efaz/.config/omarchy/current/theme/waybar.css";
+
+@define-color base      #1e1e2e;
+@define-color mantle    #181825;
+@define-color text      #cdd6f4;
+@define-color subtext1  #bac2de;
+@define-color blue      #89b4fa;
+@define-color mauve     #cba6f7;
+@define-color red       #f38ba8;
+@define-color peach     #fab387;
+@define-color green     #a6e3a1;
+@define-color sapphire  #74c7ec;
+@define-color lavender  #b4befe;
 
 * {
-  background-color: @background;
-  color: @foreground;
-
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: 'JetBrainsMono Nerd Font';
-  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 8.2pt;
+  font-weight: 600;
 }
 
-.modules-left {
-  margin-left: 8px;
+window#waybar {
+  background: @base;
+  color: @text;
+  border-bottom: 1px solid rgba(205, 214, 244, 0.1);
 }
 
-.modules-right {
-  margin-right: 8px;
+.modules-left { padding-left: 10px; }
+.modules-right { padding-right: 10px; }
+
+#workspaces, 
+#custom-cava, 
+#bluetooth, 
+#network, 
+#custom-weather, 
+#pulseaudio, 
+#backlight, 
+#memory, 
+#disk, 
+#cpu, 
+#custom-nvidia, 
+#battery, 
+#clock, 
+#tray-expander, 
+#custom-update, 
+#custom-voxtype, 
+#custom-screenrecording-indicator {
+  padding: 0 6px;
+  background: @mantle;
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  border-radius: 4px;
+  margin: 1px 2px;
+}
+
+#custom-omarchy {
+  color: @mauve;
+  padding: 0 10px;
+  font-size: 11pt;
+  background: transparent;
+  border: none;
+}
+
+#window {
+  padding: 0 15px;
+  color: @lavender;
+  font-weight: 600;
+  background: transparent;
+  border: none;
 }
 
 #workspaces button {
-  all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
+  color: @subtext1;
+  padding: 0 4px;
+  border: 1px solid transparent;
 }
 
-#workspaces button.empty {
-  opacity: 0.5;
+#workspaces button.active {
+  color: @blue;
+  background: rgba(137, 180, 250, 0.15);
+  border: 1px solid rgba(137, 180, 250, 0.5);
+  border-radius: 3px;
 }
 
-#cpu,
-#battery,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
-  min-width: 12px;
-  margin: 0 7.5px;
+#workspaces button:hover {
+  color: @mauve;
+  border: 1px solid rgba(203, 166, 247, 0.5);
+  border-radius: 3px;
 }
 
-#tray {
-  margin-right: 16px;
+#workspaces button.urgent { color: @red; }
+#workspaces button.empty { color: @subtext1; opacity: 0.3; }
+
+#tray-expander {
+  padding: 0 10px;
 }
 
-#bluetooth {
-  margin-right: 17px;
+.tray-group-item {
+  padding: 0 10px;
 }
 
+#cpu { color: @blue; }
+#memory { color: @sapphire; }
+#disk { color: @lavender; }
 #network {
-  margin-right: 13px;
+  color: @mauve;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+#pulseaudio { color: @blue; }
+#custom-cava {
+  padding: 0 4px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
 }
 
-#custom-expand-icon {
-  margin-right: 18px;
-}
-
-tooltip {
-  padding: 2px;
-}
-
-#custom-update {
-  font-size: 10px;
-}
-
-#clock {
-  margin-left: 8.75px;
-}
-
-.hidden {
+#custom-cava.silent {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   opacity: 0;
 }
 
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 5px;
-  font-size: 10px;
-  padding-bottom: 1px;
+#backlight { color: @peach; }
+#battery { color: @green; }
+#clock {
+  color: @lavender;
 }
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
+#custom-weather { color: @blue; }
+#bluetooth { color: @blue; }
+#custom-nvidia { color: @green; }
+
+tooltip {
+  background: @base;
+  border: 1px solid @mauve;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 7.5px;
+tooltip label { 
+  color: @text; 
+  font-size: 10pt;
 }
 
-#custom-voxtype.recording {
-  color: #a55555;
-}
+#clock tooltip label { font-size: 11.5pt; padding: 8px; }
+
+#cava.empty { margin: 0; padding: 0; border: none; }
