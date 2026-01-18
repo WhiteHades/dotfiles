@@ -54,11 +54,7 @@ __pick_root() {
 
 __fd_list() {
   local root; root="$(__pick_root "$@")" || return 1
-  if [[ "$root" == "/" ]]; then
-    fd -HI -t f . / -E proc -E sys -E dev -E run -E tmp -E var/cache -E var/lib -E .git 2>/dev/null
-  else
-    fd -HI -t f . "$root" --exclude .git 2>/dev/null  # fd takes a search path arg [web:95]
-  fi
+  fd -H -t f . "$root" 2>/dev/null
 }
 
 ff() {
