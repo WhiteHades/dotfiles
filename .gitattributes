@@ -1,0 +1,2 @@
+# Mark GLSL shaders as vendored so they don't skew GitHub language statistics
+**/*.glsl linguist-vendored
