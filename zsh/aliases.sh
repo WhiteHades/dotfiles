@@ -26,7 +26,7 @@ alias yt-dlp='noglob yt-dlp'
 # 2. llm templates edit ask [for adding the model name]
 
 ask() {
-  command llm -t ask "$@" | glow
+  command llm -t -m gemini-3-flash-preview ask "$@" | glow
 }
 
 unalias ff 2>/dev/null
